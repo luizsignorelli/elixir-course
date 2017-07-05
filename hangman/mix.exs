@@ -30,7 +30,7 @@ defmodule Hangman.Mixfile do
   defp deps do
     [
       { :dictionary, path: "../dictionary" },
-      { :inflex, "~> 1.8" },
+      # { :inflex, "~> 1.8" },
     ]
   end
 end
