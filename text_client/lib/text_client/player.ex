@@ -3,7 +3,9 @@ defmodule TextClient.Player do
 
   # possible states: won, lost, good_guess, bad_guess, already used, initializing
 
-  def play(%State{tally: %{game_state: :won}}) do
+  def play(game = %State{tally: %{game_state: :won}}) do
+    IO.puts("- Final state\n\n")
+    Summary.display(game)
     exit_with_message("You won!!")
   end
 
